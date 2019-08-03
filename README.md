@@ -24,11 +24,15 @@ $./distributedChatystem [username] [port] [number]
   <img width="600" src="https://ws3.sinaimg.cn/large/006tNc79ly1g04eoi1yigj30qo0k0jsc.jpg">
   
 </p>
+
 ### Marshalled Message Format
+
 messages over the network follow this format:  
+
 ```
 "[timeStamp]#[message typed from user]"
 ```
+
 ### Reliable Delivery
 
 **Reliable TCP:** In this project, direct TCP connections are established between hosts, which can provide reliable communication via IP network. And also, once the connection was broken, the alive paricipant could immediately "monitor" that. -- This mechanism works like heartbeat protocol. 
